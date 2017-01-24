@@ -18,7 +18,7 @@ Signature="$Windows NT$"
 Class=MEDIA
 ClassGuid={4d36e96c-e325-11ce-bfc1-08002be10318}
 Provider=%CNXT%
-DriverVer = 11/30/2015,8.66.23.60
+DriverVer = 07/14/2016,8.66.30.53
 CatalogFile=chdrt.cat
 
 [DestinationDirs]
@@ -30,6 +30,7 @@ Uninstall.CopyList=16422,CONEXANT\%UIPATH%
 SfxFx.CopyList=11     ; %windir%\system32
 SRSFx.CopyList=11,SRSLabs
 SfxFxW8.CopyList=11     ; %windir%\system32
+Apps.CopyFiles = 16422,%UCI_APP_PATH%
 
 [DriverInfo.DelReg]
 HKLM,Software\InstalledOptions\%DriverMfgr%\%DriverFamily%\%DriverMfgr%\%DriverProduct%
@@ -56,8 +57,16 @@ UIU64a.exe=222
 UCI64A96.DLL=222
 ALTMIXER.ini=222
 mixer.ini=222
-CX64BP14.dll=222
-
+CX64BP23.dll=222
+afa.cab=222
+saii.cab=222
+CxAudMsg.cab=222
+inst_saii.ini=222
+inst_cxaudmsg.ini=222
+inst_wafa.ini=222
+FXMisc.ini=222
+Harman.ini=222
+HPVollimit.ini=222
 CxPageMaster64.dll=222
 slcnt64.dll=222
 slprp64.dll=222
@@ -74,7 +83,7 @@ slconfig.xml=222
 [SignatureAttributes]
 CHDRT64.sys=SignatureAttributes.DRM
 CHDRT64V64.sys=SignatureAttributes.DRM
-CX64BP14.dll=SignatureAttributes.PETrust
+CX64BP23.dll=SignatureAttributes.PETrust
 CxPageMaster64.dll=SignatureAttributes.PETrust
 slcnt64.dll=SignatureAttributes.PETrust
 slprp64.dll=SignatureAttributes.PETrust
@@ -107,6 +116,12 @@ ExcludeFromSelect = *
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.13U360, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540231 ;14U360 (DMiC)
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540232
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540233
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540234
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540235
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540275 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540276 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540277 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540278 ; 15U570
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540245 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540246 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540247 ;M-project
@@ -131,6 +146,12 @@ ExcludeFromSelect = *
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.13U360, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540231 ;14U360
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540232
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540233
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540234
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540235
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540275 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540276 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540277 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540278 ; 15U570
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540245 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540246 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540247 ;M-project
@@ -155,6 +176,12 @@ ExcludeFromSelect = *
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.13U360, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540231 ;14U360
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540232
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540233
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540234
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540235
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540275 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540276 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540277 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540278 ; 15U570
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540245 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540246 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540247 ;M-project
@@ -179,6 +206,12 @@ ExcludeFromSelect = *
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.13U360, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540231 ;14U360
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540232
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540233
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540234
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540235
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540275 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540276 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540277 ; 15U570
+%HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P560, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540278 ; 15U570
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540245 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540246 ;M-project
 %HdAudioFunctionDriver.CNXTCodec.DeviceDesc% = HdAud2075x3.15P660, HDAUDIO\FUNC_01&VEN_14F1&DEV_5111&SUBSYS_18540247 ;M-project
@@ -318,7 +351,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.14Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x.14Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -328,7 +361,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15Z960.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x.15Z960.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -338,7 +371,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x.15Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -348,7 +381,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.13U360.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x.13U360.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -358,7 +391,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15P560.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x.15P560.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -368,7 +401,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15P660.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x.15P660.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -378,7 +411,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.14Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x3.14Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -388,7 +421,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15Z960.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x3.15Z960.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -398,7 +431,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x3.15Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -408,7 +441,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.13U360.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x3.13U360.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -418,7 +451,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15P560.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x3.15P560.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -428,7 +461,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15P660.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x3.15P660.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -438,7 +471,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x4.14Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x4.14Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -448,7 +481,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x4.15Z960.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
 
 [HdAud2075x4.15Z960.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -459,13 +492,20 @@ UIU64a.exe
 [CoInstaller.CopyFiles]
 UCI64A96.DLL
 
+[Apps.CopyFiles]
+afa.cab
+saii.cab
+cxaudmsg.cab
+inst_wafa.ini
+inst_saii.ini
+inst_cxaudmsg.ini
 
 [CoInstaller.AddReg]
 HKR,,CoInstallers32,0x00010000,"UCI64A96.DLL,CAUDCoInstaller"
 
 HKR,,CompanyName,,%DriverMfgr%
 HKR,,ProductName,,%ProductName%
-
+HKR,,InstallationAppPath,,"%16422%\%UCI_APP_PATH%"
 
 ;Used to setup localized endpoints through Mixer.ini and Altmixer.ini
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\LocalGuid,{C9274F92-9504-44cc-971A-88A2C64D08D4},,KSPINNAME_CNXT_ALT_INTERNAL_MICROPHONE
@@ -493,12 +533,14 @@ HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files\DLL,UCI64A96.DLL,,0x00000008
 
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\RegUpgradeMoveRestore, "HKR\GlobalSettings\JackSense",, 0x00000005
 
-HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files\VXDDLL,CX64BP14.dll,,0x00000008
+HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files\VXDDLL,CX64BP23.dll,,0x00000008
 
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\Mixer.ini,,0x00000008
-
+HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\FXMisc.ini,,0x00000008
+HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\Harman.ini,,0x00000008
+HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\SPKVol.ini,,0x00000008
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\RegKeys,"SYSTEM\CurrentControlSet\Control\Conexant\EQ",,0x00000009
-
+HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Folders,"%16422%\%UCI_APP_PATH%",,0x00000008
 
 [CoUnInstaller.AddReg]
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\RegKeys,"Software\Microsoft\Windows\CurrentVersion\Uninstall",,%UIPATH%
@@ -739,19 +781,19 @@ HKR,"EP\\0",%PKEY_AudioEndpoint_Association%,,%KSNODETYPE_SPDIF_INTERFACE%
 HKR,"EP\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0020
 
 [SfxFx.CopyList]
-CX64BP14.dll
+CX64BP23.dll
 CxPageMaster64.dll
 
 [SfxFx.RegisterDlls]
-11,,CX64BP14.dll,1
+11,,CX64BP23.dll,1
 11,,CxPageMaster64.dll,1
 
 [SfxFxW8.CopyList]
-CX64BP14.dll
+CX64BP23.dll
 CxPageMaster64.dll
 
 [SfxFxW8.RegisterDlls]
-11,,CX64BP14.dll,1
+11,,CX64BP23.dll,1
 11,,CxPageMaster64.dll,1
 
 [SRSFx.CopyList]
@@ -778,12 +820,17 @@ ServiceBinary = %10%\system32\drivers\CHDRT64.sys
 CHDRT64.sys
 ALTMIXER.ini
 Mixer.ini
-
+FXMisc.ini
+Harman.ini
+HPVollimit.ini
 
 [HdAudModelV64.CopyList]
 CHDRT64.sys, CHDRT64V64.sys,,
 ALTMIXER.ini
 Mixer.ini
+FXMisc.ini
+Harman.ini
+HPVollimit.ini
 
 
 [HdAudModel.AddReg]
@@ -965,6 +1012,7 @@ HKR,Settings\OEM,DefaultVREnabled,1,00,00,00,00
 HKR,Settings\OEM,AcerComboJackBiasCtrl,1,02,1d,19,04
 ;;HKR,Settings\OEM,HpVolumeLimit,1,00,00,F1,FF
 HKR,Settings\OEM,JackThreadDelayFromSuspend,1,00,00,00,00
+HKR,Settings\OEM,ResumeDelayPeriodInMs,1,e8,03,00,00
 
 HKR,Settings\OEM,EnableIntelASR,1,00,00,00,00
 HKR,Settings\OEM,SyncI2SOutWithSPK,1,00,00,00,00
@@ -1101,6 +1149,7 @@ HKR,Settings\OEM,DefaultVREnabled,1,00,00,00,00
 HKR,Settings\OEM,AcerComboJackBiasCtrl,1,02,1d,19,04
 ;;HKR,Settings\OEM,HpVolumeLimit,1,00,00,F1,FF
 HKR,Settings\OEM,JackThreadDelayFromSuspend,1,00,00,00,00
+HKR,Settings\OEM,ResumeDelayPeriodInMs,1,e8,03,00,00
 
 HKR,Settings\OEM,EnableIntelASR,1,00,00,00,00
 HKR,Settings\OEM,SyncI2SOutWithSPK,1,00,00,00,00
@@ -1246,6 +1295,7 @@ HKR,Settings\OEM,DefaultVREnabled,1,00,00,00,00
 HKR,Settings\OEM,AcerComboJackBiasCtrl,1,02,1d,19,04
 ;;HKR,Settings\OEM,HpVolumeLimit,1,81,69,FA,FF
 HKR,Settings\OEM,JackThreadDelayFromSuspend,1,00,00,00,00
+HKR,Settings\OEM,ResumeDelayPeriodInMs,1,e8,03,00,00
 
 HKR,Settings\OEM,EnableIntelASR,1,00,00,00,00
 HKR,Settings\OEM,SyncI2SOutWithSPK,1,00,00,00,00
@@ -3225,11 +3275,11 @@ PKEY_Endpoint_Enable_LFX_AEC = "{7996efb2-29c1-4898-be83-4a3646e06fac},0"
 PKEY_Endpoint_Enable_GFX = "{7f73d4e1-91e3-4490-9fba-5e86680a5748},0"
 
 SYSFX_UI_CLSID      = "{5860E1C5-F95C-4a7a-8EC8-8AEF24F379A1}"
-SYSFX_PREMIX_CLSID  = "{19A120F2-EB17-4913-B7F0-C79704811400}"
-SYSFX_POSTMIX_CLSID = "{C21FE761-A4DE-4060-B707-0E0C04811400}"
+SYSFX_PREMIX_CLSID  = "{19A120F2-EB17-4913-B7F0-C79704812300}"
+SYSFX_POSTMIX_CLSID = "{C21FE761-A4DE-4060-B707-0E0C04812300}"
 
-SYSFX_PREMIXW8_CLSID  = "{19A120F2-EB17-4913-B7F0-C79704811400}"
-SYSFX_POSTMIXW8_CLSID = "{C21FE761-A4DE-4060-B707-0E0C04811400}"
+SYSFX_PREMIXW8_CLSID  = "{19A120F2-EB17-4913-B7F0-C79704812300}"
+SYSFX_POSTMIXW8_CLSID = "{C21FE761-A4DE-4060-B707-0E0C04812300}"
 
 ; Page Master UI Defines
 PAGE_MASTER_UI_CLSID	= "{AA747400-B9F8-4D7F-B41C-F8CF3047A0DB}"   ; Page Master UI page
@@ -3269,11 +3319,13 @@ DesDigiMicBoost_CLSID = "{4d8b5a4e-4f8b-4be5-b109-4b7214611257},2"
 ; History Information
 DriverMfgr="Conexant"
 ProductName = "Conexant High Definition SmartAudio"
-DriverVersionID="8.66.23"
-DriverBuildDate="11/30/2015"
-DriverBuildID="8.66.23.60"
-INFVersionID="8.66.23.60-000"
+DriverVersionID="8.66.30"
+DriverBuildDate="07/14/2016"
+DriverBuildID="8.66.30.53"
+INFVersionID="8.66.30.53-000"
 DriverFamily="Audio"
 DriverProduct="SmartAudio"
 DriverDescription="Audio Driver"
 DriverMfgrVersion="x00"
+; For WU driver
+UCI_APP_PATH = "Conexant\Install\Audio"
