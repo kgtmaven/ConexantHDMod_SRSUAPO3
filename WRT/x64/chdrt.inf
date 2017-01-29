@@ -17,7 +17,7 @@
 Signature="$Windows NT$"
 Class=MEDIA
 ClassGuid={4d36e96c-e325-11ce-bfc1-08002be10318}
-Provider=%CNXT%
+Provider=Modded by kgtmaven
 DriverVer = 07/14/2016,8.66.30.53
 CatalogFile=chdrt.cat
 
@@ -30,7 +30,9 @@ Uninstall.CopyList=16422,CONEXANT\%UIPATH%
 SfxFx.CopyList=11     ; %windir%\system32
 SRSFx.CopyList=11,SRSLabs
 SfxFxW8.CopyList=11     ; %windir%\system32
-Apps.CopyFiles = 16422,%UCI_APP_PATH%
+SysFx.NTamd64.CopyList=11,SRSLabs\HeadphoneX
+SysFx.6.3.NTamd64.CopyList=11,SRSLabs\HeadphoneX
+SysFx.NTamd64.CoInstallers.CopyList=11,SRSLabs\HeadphoneX
 
 [DriverInfo.DelReg]
 HKLM,Software\InstalledOptions\%DriverMfgr%\%DriverFamily%\%DriverMfgr%\%DriverProduct%
@@ -58,21 +60,15 @@ UCI64A96.DLL=222
 ALTMIXER.ini=222
 mixer.ini=222
 CX64BP23.dll=222
-afa.cab=222
-saii.cab=222
-CxAudMsg.cab=222
-inst_saii.ini=222
-inst_cxaudmsg.ini=222
-inst_wafa.ini=222
-FXMisc.ini=222
-Harman.ini=222
-HPVollimit.ini=222
+
 CxPageMaster64.dll=222
 slcnt64.dll=222
 slprp64.dll=222
 sltech64.dll=222
-sluapo64.dll=222
+sl3apo64.dll=222
 slconfig.xml=222
+DTSHpxInit64.dll=222
+kgtmaven.xml=222
 
 [Manufacturer]
 %CNXT%=Conexant, NTamd64.6.1, NTamd64.6.2, NTamd64.6.3, NTamd64.6.4
@@ -88,7 +84,8 @@ CxPageMaster64.dll=SignatureAttributes.PETrust
 slcnt64.dll=SignatureAttributes.PETrust
 slprp64.dll=SignatureAttributes.PETrust
 sltech64.dll=SignatureAttributes.PETrust
-sluapo64.dll=SignatureAttributes.PETrust
+sl3apo64.dll=SignatureAttributes.PETrust
+DtsHpxInit64.dll=SignatureAttributes.PETrust
 
 [SignatureAttributes.DRM]
 DRMLevel=1300
@@ -224,134 +221,134 @@ ExcludeFromSelect = *
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x.15Z960.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, AECOn.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x.15Z950.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, LvlRelAdjust.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x.13U360.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SysFx.6.3.NTamd64.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x.15P660.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x.15P560.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x_15P.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x3.14Z950.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x3.15Z960.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, AECOn.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x3.15Z950.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, LvlRelAdjust.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x3.13U360.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x3.15P560.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x_15P.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x3.15P660.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x4.14Z950.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, ASR.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x4.15Z960.NTamd64]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
 DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SRSFx.CopyList
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, SysFx.6.3.NTamd64.CopyList
 AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, ASR.AddReg, AECOn.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, SysFx.NTamd64.RegisterDlls
 
 [HdAud2075x.14Z950.NTamd64.Services]
 AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.14Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x.14Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -361,7 +358,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15Z960.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x.15Z960.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -371,7 +368,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x.15Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -381,7 +378,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.13U360.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x.13U360.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -391,7 +388,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15P560.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x.15P560.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -401,7 +398,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x.15P660.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x.15P660.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -411,7 +408,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.14Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x3.14Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -421,7 +418,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15Z960.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x3.15Z960.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -431,7 +428,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x3.15Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -441,7 +438,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.13U360.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x3.13U360.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -451,7 +448,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15P560.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x3.15P560.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -461,7 +458,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x3.15P660.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x3.15P660.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -471,7 +468,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x4.14Z950.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x4.14Z950.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -481,7 +478,7 @@ AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
 
 [HdAud2075x4.15Z960.NTAMD64.CoInstallers]
 AddReg          = Coinstaller.AddReg
-CopyFiles       = CoInstaller.CopyFiles, Apps.CopyFiles
+CopyFiles       = CoInstaller.CopyFiles, SysFx.NTamd64.CoInstallers.CopyList
 
 [HdAud2075x4.15Z960.NTAMD64.HW]
 AddReg = HdAudSecurity.AddReg
@@ -492,20 +489,23 @@ UIU64a.exe
 [CoInstaller.CopyFiles]
 UCI64A96.DLL
 
-[Apps.CopyFiles]
-afa.cab
-saii.cab
-cxaudmsg.cab
-inst_wafa.ini
-inst_saii.ini
-inst_cxaudmsg.ini
+[SysFx.NTamd64.CoInstallers.CopyList]
+DTSHpxInit64.dll
+
+[DLLSysFX.NTx86.AddReg]
+HKLM,"%SRS_REGISTRY%\APO",Version,,"V3.5.10.0",
+HKLM,"%SRS_REGISTRY%\SuperHumanHearing",Version,,"V1.0.4",
+
+[DLLSysFX.NTamd64.AddReg]
+HKLM,"%SRS_REGISTRY%\APO",Version,,"V3.5.10.0",
+HKLM,"%SRS_REGISTRY%\SuperHumanHearing",Version,,"V1.0.4",
 
 [CoInstaller.AddReg]
 HKR,,CoInstallers32,0x00010000,"UCI64A96.DLL,CAUDCoInstaller"
 
 HKR,,CompanyName,,%DriverMfgr%
 HKR,,ProductName,,%ProductName%
-HKR,,InstallationAppPath,,"%16422%\%UCI_APP_PATH%"
+
 
 ;Used to setup localized endpoints through Mixer.ini and Altmixer.ini
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\LocalGuid,{C9274F92-9504-44cc-971A-88A2C64D08D4},,KSPINNAME_CNXT_ALT_INTERNAL_MICROPHONE
@@ -536,11 +536,11 @@ HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\RegUpgradeMoveRestore, "HKR\GlobalSett
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files\VXDDLL,CX64BP23.dll,,0x00000008
 
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\Mixer.ini,,0x00000008
-HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\FXMisc.ini,,0x00000008
-HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\Harman.ini,,0x00000008
-HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Files,%16422%\%CoreFilePath%\SPKVol.ini,,0x00000008
+
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\RegKeys,"SYSTEM\CurrentControlSet\Control\Conexant\EQ",,0x00000009
-HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Folders,"%16422%\%UCI_APP_PATH%",,0x00000008
+
+HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\Application\Launch,"rundll32.exe %11%\SRSLabs\HeadphoneX\DTSHpxInit64.dll,Install",,0x00000022
+
 
 [CoUnInstaller.AddReg]
 HKLM, SOFTWARE\%DriverMfgr%\%ProductName%\RegKeys,"Software\Microsoft\Windows\CurrentVersion\Uninstall",,%UIPATH%
@@ -570,11 +570,20 @@ HKR,"FX\\0",%PKEY_FX_Association%,,%KSNODETYPE_SPEAKER%
 HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1017", %REG_DWORD%, 0x0001  ;;Disable Pause Ramping
 HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1020", %REG_DWORD%, 0x0000  ;;Disable Pause Ramping
 
-HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
-HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2% 
-HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
-HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
-HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_SurroundOn%,%REG_DWORD%,0x1 
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_Vendor%,%REG_DWORD%,0x10f5
+
+;HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
+;HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2% 
+;HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
+;HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
+;HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+
+;HKR,"EP\\0",%PKEY_DTSHPX_Association%,,Software\SRS Labs\APO\{0D490185-0EF5-4E25-9994-EF95218A851C}
+HKR,"EP\\0",%PKEY_DTSHPX_APOLocation%,,"%11%\SRSLabs\HeadphoneX"
+HKR,"EP\\0",%PKEY_DTSHPX_XmlLocation%,,"%11%\SRSLabs\HeadphoneX\kgtmaven.xml"
+;HKR,"EP\\0",%PKEY_DTSHPX_HwIdentifier%,,""
+;HKR,"EP\\0",%PKEY_DTSHPX_CodecId%,,0x0200
 
 [HdAudModel.SSysFx.CNXT.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
@@ -612,18 +621,27 @@ HKR,"FX\\0",%PKEY_FX_Association%,,%KSNODETYPE_SPEAKER%
 HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1017", %REG_DWORD%, 0x0001  ;;Disable Pause Ramping
 HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1020", %REG_DWORD%, 0x0000  ;;Disable Pause Ramping
 
-HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
-HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2%
-HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
-HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
-HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_SurroundOn%,%REG_DWORD%,0x1 
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_Vendor%,%REG_DWORD%,0x10f5
+
+;HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
+;HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2%
+;HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
+;HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
+;HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+
+;HKR,"EP\\0",%PKEY_DTSHPX_Association%,,Software\SRS Labs\APO\{0D490185-0EF5-4E25-9994-EF95218A851C}
+HKR,"EP\\0",%PKEY_DTSHPX_APOLocation%,,"%11%\SRSLabs\HeadphoneX"
+HKR,"EP\\0",%PKEY_DTSHPX_XmlLocation%,,"%11%\SRSLabs\HeadphoneX\kgtmaven.xml"
+;HKR,"EP\\0",%PKEY_DTSHPX_HwIdentifier%,,""
+;HKR,"EP\\0",%PKEY_DTSHPX_CodecId%,,0x0200
 
 ;; CNXT MFX keys
 HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
-;; CNXT SFX keys
-HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
+;; SRS SFX keys
+HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SRS3_SYSFX_SFX_CLSID%
 HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; SRS EFX keys
@@ -673,11 +691,20 @@ HKR,"FX\\0",%PKEY_Endpoint_Enable_GFX%, %REG_DWORD%, 0x0001
 HKR,"FX\\0",%PKEY_AudioEndpoint_Disable_SysFx%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_FX_Association%,,%KSNODETYPE_HEADPHONES%
 
-HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
-HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2% 
-HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
-HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
-HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_SurroundOn%,%REG_DWORD%,0x1 
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_Vendor%,%REG_DWORD%,0x10f5
+
+;HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
+;HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2% 
+;HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
+;HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
+;HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+
+;HKR,"EP\\0",%PKEY_DTSHPX_Association%,,Software\SRS Labs\APO\{0D490185-0EF5-4E25-9994-EF95218A851C}
+HKR,"EP\\0",%PKEY_DTSHPX_APOLocation%,,"%11%\SRSLabs\HeadphoneX"
+HKR,"EP\\0",%PKEY_DTSHPX_XmlLocation%,,"%11%\SRSLabs\HeadphoneX\kgtmaven.xml"
+;HKR,"EP\\0",%PKEY_DTSHPX_HwIdentifier%,,""
+;HKR,"EP\\0",%PKEY_DTSHPX_CodecId%,,0x0200
 
 [HdAudModel.HSysFx.CNXT.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
@@ -705,18 +732,27 @@ HKR,"FX\\0",%PKEY_Endpoint_Enable_GFX%, %REG_DWORD%, 0x0001
 HKR,"FX\\0",%PKEY_AudioEndpoint_Disable_SysFx%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_FX_Association%,,%KSNODETYPE_HEADPHONES%
 
-HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
-HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2% 
-HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
-HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
-HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_SurroundOn%,%REG_DWORD%,0x1 
+HKR,"FX\\0",%PKEY_Endpoint_HeadphoneX_Vendor%,%REG_DWORD%,0x10f5
+
+;HKR,"EP\\0",%PKEY_SRS30_Association%,,%SRS_REGISTRY%
+;HKR,"EP\\0",%PKEY_SRS30_APOLocation%,,%SRS_TYPE2% 
+;HKR,"EP\\0",%PKEY_SRS30_XmlLocation%,,
+;HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
+;HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
+
+;HKR,"EP\\0",%PKEY_DTSHPX_Association%,,Software\SRS Labs\APO\{0D490185-0EF5-4E25-9994-EF95218A851C}
+HKR,"EP\\0",%PKEY_DTSHPX_APOLocation%,,"%11%\SRSLabs\HeadphoneX"
+HKR,"EP\\0",%PKEY_DTSHPX_XmlLocation%,,"%11%\SRSLabs\HeadphoneX\kgtmaven.xml"
+;HKR,"EP\\0",%PKEY_DTSHPX_HwIdentifier%,,""
+;HKR,"EP\\0",%PKEY_DTSHPX_CodecId%,,0x0200
 
 ;; CNXT MFX keys
 HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
-;; CNXT SFX keys
-HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
+;; SRS SFX keys
+HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SRS3_SYSFX_SFX_CLSID%
 HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; SRS EFX keys
@@ -800,14 +836,24 @@ CxPageMaster64.dll
 slcnt64.dll
 slprp64.dll
 sltech64.dll
-sluapo64.dll
+sl3apo64.dll
 slconfig.xml
+
+[SysFx.6.3.NTamd64.CopyList]
+slcnt64.dll
+sltech64.dll
+sl3apo64.dll
+kgtmaven.xml
 
 [SRS.RegisterDlls]
 11,SRSLabs,slcnt64.dll,1
 11,SRSLabs,slprp64.dll,1
 11,SRSLabs,sltech64.dll,1
-11,SRSLabs,sluapo64.dll,1
+11,SRSLabs,sl3apo64.dll,1
+
+[SysFx.NTamd64.RegisterDlls]
+11,SRSLabs\HeadphoneX,slcnt64.dll,1
+11,SRSLabs\HeadphoneX,sl3apo64.dll,1
 
 [HdAud_Service_Install]
 DisplayName   = %UAAFunctionDriverForHdAudio.SvcDesc%
@@ -820,17 +866,12 @@ ServiceBinary = %10%\system32\drivers\CHDRT64.sys
 CHDRT64.sys
 ALTMIXER.ini
 Mixer.ini
-FXMisc.ini
-Harman.ini
-HPVollimit.ini
+
 
 [HdAudModelV64.CopyList]
 CHDRT64.sys, CHDRT64V64.sys,,
 ALTMIXER.ini
 Mixer.ini
-FXMisc.ini
-Harman.ini
-HPVollimit.ini
 
 
 [HdAudModel.AddReg]
@@ -895,7 +936,8 @@ HKR,Settings\AmpControl,AmpControlPortOptions,1,64,00,00,00
 HKLM, SYSTEM\CurrentControlSet\Control\Conexant\LvlRelAdjust,NightModeGainBoost,0x10001,0x00090000 ; 9dB gain is applied when nightmode is on
 
 [SRS.AddReg]
-HKLM,%SRS_REGISTRY%,SrsApoTechDllPath,,%11%\SRSLabs\sltech64.dll ; SRS Dll Allocation
+;HKLM,%SRS_REGISTRY%,SrsApoTechDllPath,,%11%\SRSLabs\sltech64.dll ; SRS Dll Allocation
+HKLM,%SRS_REGISTRY%,SrsApoTechDllPath,,%11%\SRSLabs\HeadphoneX\sltech64.dll ; SRS Dll Allocation
 HKLM,%SRS_REGISTRY%,"{66E88EA2-A239-4e1f-82FF-2F45359AEC94},9",%REG_DWORD%,0x0001 ; Default SRS profile to SPK
 HKLM,%SRS_REGISTRY%\SRS Premium Sound,"ControlPanelPath",,"C:\Program Files (x86)\DTS, Inc\DTS Studio Sound\APO3GUI.exe" 
 HKLM,%SRS_REGISTRY%\SRS Premium Sound,"ControlPanelArg",,"" 
@@ -1367,7 +1409,7 @@ HKR,Settings\OEM\FlexSettings,Flex_MicCaptureVolume,0x00000001,64,00,00,00
 HKR,Settings\OEM\FlexSettings,Flex_CDCaptureVolume,0x00000001,64,00,00,00
 
 [HdAudBranding.AddProperty]
-DeviceVendorWebSite,,,,"http://www.conexant.com"
+DeviceVendorWebSite,,,,"http://blog.naver.com/kgtmaven"
 
 [HdAud.DelReg]
 HKR, Drivers
@@ -3244,6 +3286,28 @@ SRS_SYSFX_FriendlyName  = "SRS Universal APO 3.0 for HD Audio from SRS Labs, Inc
 SRS3_SYSFX_SFX_CLSID  = "{1B917FE2-47D1-425D-A26E-AFCDBDA7A2E8}"
 SRS3_SYSFX_MFX_CLSID  = "{134DDB7A-41FC-40E6-8D6B-E284C51D160E}"
 SRS3_SYSFX_EFX_CLSID  = "{7B4BF64E-D05D-481D-97CC-C0829AC9280F}"
+
+;;Win7 & Win8
+SYSFX_PREMIX_CLSID  = "{CB0EAF7D-3991-4921-AA30-CD32798EDC3A}"
+
+;;Win81 & Win10
+SYSFX_StreamEffect_CLSID = "{1B917FE2-47D1-425D-A26E-AFCDBDA7A2E8}"
+SYSFX_ModeEffect_CLSID = "{134DDB7A-41FC-40E6-8D6B-E284C51D160E}"
+SYSFX_SFXMode_CLSID = "{C18E2F7E-933D-4965-B7D1-1EEF228D2AF3}"
+SYSFX_MFXMode_CLSID = "{C18E2F7E-933D-4965-B7D1-1EEF228D2AF3}"
+SYSFX_SystemEffect_CLSID_NULL = "{00000000-0000-0000-0000-000000000000}"
+
+;;DTS APO Registry
+PKEY_DTSHPX_Association = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},0"
+PKEY_DTSHPX_APOLocation = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},1"
+PKEY_DTSHPX_XmlLocation = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},2"
+PKEY_DTSHPX_HwIdentifier = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},3"
+PKEY_DTSHPX_CodecId = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},4"
+
+PKEY_Endpoint_HeadphoneX_SurroundOn = "{9e456e7b-58bb-4cd5-9071-3dbb42e1b216},3"
+PKEY_Endpoint_HeadphoneX_Vendor = "{9e456e7b-58bb-4cd5-9071-3dbb42e1b216},10"
+
+SRS_REGISTRY            = "Software\SRS Labs"
 
 KSNODETYPE_SPEAKER = "{DFF21CE1-F70F-11D0-B917-00A0C9223196}"
 KSNODETYPE_HEADPHONES = "{DFF21CE2-F70F-11D0-B917-00A0C9223196}"
